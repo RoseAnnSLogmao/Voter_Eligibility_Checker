@@ -11,13 +11,13 @@ class TestVoterEligibility(unittest.TestCase):
         self.assertTrue(is_eligible_to_vote(17, True))
 
     def test_non_citizen_voter(self):
-        self.assertTrue(is_eligible_to_vote(25, False))
+        self.assertFalse(is_eligible_to_vote(25, False))
 
     def test_underage_non_citizen(self):
-        self.assertTrue(is_eligible_to_vote(16, False))
+        self.assertFalse(is_eligible_to_vote(16, False))
 
     def test_exactly_18_and_non_citizen(self):
-        self.assertTrue(is_eligible_to_vote(17, False))
+        self.assertFalse(is_eligible_to_vote(17, False))
 
     def test_negative_age(self):
         with self.assertRaises(ValueError):
