@@ -1,6 +1,7 @@
 import unittest
 from voter_checker import is_eligible_to_vote
 
+
 class TestVoterEligibility(unittest.TestCase):
 
 
