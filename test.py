@@ -19,8 +19,8 @@ class TestVoterEligibility(unittest.TestCase):
     def test_exactly_18_and_non_citizen(self):
         self.assertTrue(is_eligible_to_vote(17, False))
 
-    # def test_negative_age(self):
-    #     self.assertRaises(ValueError):(is_eligible_to_vote(-1, True))
+    def test_negative_age(self):
+        self.assertRaises(ValueError):(is_eligible_to_vote(-1, True))
 
 
 if __name__ == "__main__":
