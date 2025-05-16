@@ -4,7 +4,6 @@ from voter_checker import is_eligible_to_vote
 
 class TestVoterEligibility(unittest.TestCase):
 
-
     def test_valid_voter(self):
         self.assertTrue(is_eligible_to_vote(18, True))
 
@@ -12,16 +11,16 @@ class TestVoterEligibility(unittest.TestCase):
         self.assertTrue(is_eligible_to_vote(17, True))
 
     def test_non_citizen_voter(self):
-         self.assertTrue(is_eligible_to_vote(25, False))
+        self.assertTrue(is_eligible_to_vote(25, False))
 
     def test_underage_non_citizen(self):
-         self.assertTrue(is_eligible_to_vote(16,False))
+        self.assertTrue(is_eligible_to_vote(16,False))
 
     def test_exactly_18_and_non_citizen(self):
-         self.assertTrue(is_eligible_to_vote(17, False))
+        self.assertTrue(is_eligible_to_vote(17, False))
 
     def test_negative_age(self):
-         self.assertTrue(is_eligible_to_vote(18, False))
+        self.assertTrue(is_eligible_to_vote(18, False))
     
 if __name__ =="__main__":
     unittest.main()
